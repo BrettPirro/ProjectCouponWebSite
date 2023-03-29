@@ -3,7 +3,7 @@
 	display: block;
 	padding-top: 3%;
   width: 25%;
-
+  transition: 0.5s;
   z-index: 1;
 
 }
@@ -35,6 +35,7 @@
 
 .Obj2
 {
+  display: block;
   position: absolute;
   margin-left: auto;
   margin-right: auto;
@@ -140,8 +141,14 @@ body
 @media screen and (max-height: 450px) {
   .nav {padding-top: 15px;}
   .nav a {font-size: 18px;}
+
 }
 
+@media screen and (max-width: 480px)
+{
+  #Title{ width: 60%; }
+
+}
 
 #SocialTextBar
 {
