@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="StyleSheet.css">
+
+<head>
+	
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Project Coupon</title>
+	<div class="TaskBar" id="MainTaskBar">
+	 	<a span style="font-size:30px;cursor:pointer" onclick="openNavMenu()">&#9776;</span>
+	</div> 
+</head>
+<body>
+
+
+
+<div id="mainContent">
+	
+	<div class="SortObj">
+		<img class='Obj2'id="Title" src="Images/Title.png">
+	  <img class='Obj1' id="CoverImg" src="Images/CoverImg.png">
+
+	</div>
+
+	
+
+
+
+</div>
+
+
+
+<div id="navMenu" class="nav">
+  	<a href="javascript:void(0)" class="closebtn" onclick="closeNavMenu()">&times;</a>
+  	<a href="#Home">Home</a>
+  	<a href="#About_Us">About Us</a>
+  	<a href="#Updates">Updates</a>
+  	<a href="#Support">Support</a>
+</div>
+
+
+<div id="SocialTextBar">
+		<a  href="#Twitter"><img class="icons" src="Images/Twitter.png"></a>
+  	<a href="#Youtube"><img class="icons" src="Images/Youtube.png"></a>
+  	<a href="#Itch"><img class="icons" src="Images/itch-io.png"></a>
+  
+</div>
+
+
+
+
+
+
+<script>
+
+function openNavMenu() {
+  document.getElementById("navMenu").style.width = "250px";
+  document.getElementById("mainContent").style.marginLeft = "15%";
+   document.body.style.backgroundColor = "rgba(45,39,39,1 )";
+}
+
+function closeNavMenu() {
+  document.getElementById("navMenu").style.width = "0";
+  document.getElementById("mainContent").style.marginLeft= "0%";
+   document.body.style.backgroundColor = "#2D2727";
+}
+
+</script>
+</body>
+
+
+
+</html>

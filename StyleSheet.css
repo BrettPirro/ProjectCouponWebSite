@@ -1,0 +1,177 @@
+#Title
+{
+	display: block;
+	padding-top: 3%;
+
+
+  z-index: 1;
+
+}
+
+
+#CoverImg
+{
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  margin: 0;
+}
+
+
+.SortObj
+{
+	position: relative;
+  top: 0;
+  left: 0;
+}
+
+.Obj1
+{
+  position: relative;
+
+
+
+}
+
+.Obj2
+{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+
+
+}
+
+
+
+body
+{
+	background-color: #2D2727;
+
+}
+
+
+.TaskBar
+{
+   background-color:#2D2727;
+   overflow: auto;
+   position: sticky;
+   top: 0;
+    z-index: 12;
+
+}
+
+
+
+.TaskBar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+
+
+ 
+}
+
+
+.TaskBar a:hover {
+  background-color: #8F43EE;
+  color: black;
+}
+
+
+.TaskBar a.split
+{
+	float: right;
+	background-color: #8F43EE;
+	color: white;
+}
+
+.TaskBar .item {
+   display: inline;
+  position: absolute;
+}
+
+
+.nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 12;
+
+}
+
+.nav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.2s;
+}
+
+.nav a:hover {
+  color: #f1f1f1;
+}
+
+.nav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 10%;
+}
+
+#mainContent {
+  transition: margin-left .5s;
+}
+
+@media screen and (max-height: 450px) {
+  .nav {padding-top: 15px;}
+  .nav a {font-size: 18px;}
+}
+
+
+#SocialTextBar
+{
+  
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#SocialTextBar a
+{
+  display: inline-block;
+  color: #f2f2f2;
+  padding: .5% 3.5%;
+  text-decoration: none;
+  font-size: 17px;
+
+}
+
+#SocialTextBar a:hover
+{
+  background-color: #8F43EE;
+  color: black;
+
+}
+
+.icons
+{
+   width: 50px;
+}
+
+}
