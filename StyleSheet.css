@@ -2,7 +2,7 @@
 {
 	display: block;
 	padding-top: 3%;
-  width: 25%;
+  width: 45%;
   transition: 0.5s;
   z-index: 1;
 
@@ -50,7 +50,7 @@
 
 body
 {
-	background-color: #2D2727;
+	background-color: #000000;
   margin: 0;
 
 }
@@ -58,7 +58,7 @@ body
 
 .TaskBar
 {
-   background-color:#2D2727;
+   background-color:#000000;
    overflow: auto;
    position: sticky;
    top: 0;
@@ -82,7 +82,7 @@ body
 
 
 .TaskBar a:hover {
-  background-color: #8F43EE;
+  background-color: #3cb455;
   color: black;
 }
 
@@ -90,7 +90,7 @@ body
 .TaskBar a.split
 {
 	float: right;
-	background-color: #8F43EE;
+	background-color: #3cb455;
 	color: white;
 }
 
@@ -107,7 +107,7 @@ body
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: #0b0b0b;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -149,7 +149,7 @@ body
 
 @media screen and (max-width: 480px)
 {
-  #Title{ width: 60%; }
+  #Title{ width: 90%; }
 
 }
 
@@ -178,8 +178,8 @@ body
 
 #SocialTextBar img:hover
 {
-  background-color: #8F43EE;
-  color: black;
+  background-color: #3cb455;
+  color: #000000;
 
 }
 
@@ -207,7 +207,7 @@ body
   
   background-image: url("Images/backingToText.jpg");
   width: 100%;
-  transition: opacity .2s;
+  transition: opacity 3s;
   opacity:1;
  
 

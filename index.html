@@ -69,25 +69,53 @@
 
 
 <script>
-document.getElementById("Description").style.opacity=0.2
+if (!elementInViewport("Description")) {document.getElementById("Description").style.opacity=0.2}
 function openNavMenu() {
   document.getElementById("navMenu").style.width = "250px";
   document.getElementById("mainContent").style.marginLeft = "8%";
-   document.body.style.backgroundColor = "rgba(45,39,39,1 )";
 }
 
 function closeNavMenu() {
   document.getElementById("navMenu").style.width = "0";
   document.getElementById("mainContent").style.marginLeft= "0%";
-   document.body.style.backgroundColor = "#2D2727";
 }
 
 
 window.addEventListener("scroll", (event) => {
-    let scroll = this.scrollY;
-    if (scroll>=250) {document.getElementById("Description").style.opacity=1}
+    if (elementInViewport("Description")) {document.getElementById("Description").style.opacity=1}
     else{document.getElementById("Description").style.opacity=0.2}
 });
+
+function elementInViewport(Element) {
+		var myElement = document.getElementById(Element);
+		var myElementHeight = myElement.offsetHeight;
+		var myElementWidth = myElement.offsetWidth;
+    var bounding = myElement.getBoundingClientRect();
+
+    if (bounding.top >= -myElementHeight 
+        && bounding.left >= -myElementWidth
+        && bounding.right <= (window.innerWidth || document.documentElement.clientWidth) + myElementWidth
+        && bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) + myElementHeight) {
+
+        return true;
+    } else {
+
+        return false;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </script>
 </body>
