@@ -15,6 +15,7 @@
   margin-left: auto;
   width: 100%;
   margin: 0;
+
 }
 
 
@@ -50,6 +51,7 @@
 body
 {
 	background-color: #2D2727;
+  margin: 0;
 
 }
 
@@ -117,6 +119,7 @@ body
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
+  font-family: Space;
   color: #818181;
   display: block;
   transition: 0.2s;
@@ -149,6 +152,7 @@ body
   #Title{ width: 60%; }
 
 }
+
 
 #SocialTextBar
 {
@@ -191,5 +195,43 @@ body
    padding: .5% 4.8%;
 }
 
+@font-face
+{
+  font-family: Space;
+  src: url("Fonts/space age.ttf");
+}
+
+
+#Description
+{
+  
+  background-image: url("Images/backingToText.jpg");
+  width: 100%;
+  transition: opacity .2s;
+  opacity:1;
+ 
 
 }
+
+
+
+
+#Description h2
+{
+  color: white;
+  text-align: center;
+  font-family: Space;
+  font-size: 50px;
+}
+
+#Description p
+{
+  padding-top: 3%;
+  color: white;
+  font-family: Space;
+  text-align: center;
+  font-size: 30px;
+}
+
+
+

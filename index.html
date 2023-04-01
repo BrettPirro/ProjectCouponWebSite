@@ -29,6 +29,15 @@
   	<img href="#FaceBook" class="icons" src="Images/Facebook.png">
 </div>
 <hr>
+
+<div id="Description">
+	<h2>Dive into the depths...</h2>
+	<p>Explore the depths of your ship</p>
+	
+	<p>See whats hidden underneath</p>
+	
+	<p>and SURVIVE</p>
+</div>
 	
 
 
@@ -60,7 +69,7 @@
 
 
 <script>
-
+document.getElementById("Description").style.opacity=0.2
 function openNavMenu() {
   document.getElementById("navMenu").style.width = "250px";
   document.getElementById("mainContent").style.marginLeft = "8%";
@@ -72,6 +81,13 @@ function closeNavMenu() {
   document.getElementById("mainContent").style.marginLeft= "0%";
    document.body.style.backgroundColor = "#2D2727";
 }
+
+
+window.addEventListener("scroll", (event) => {
+    let scroll = this.scrollY;
+    if (scroll>=250) {document.getElementById("Description").style.opacity=1}
+    else{document.getElementById("Description").style.opacity=0.2}
+});
 
 </script>
 </body>
