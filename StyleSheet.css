@@ -206,6 +206,8 @@ body
 {
   
   background-image: url("Images/backingToText.jpg");
+  background-position: center;
+  background-size: cover;
   width: 100%;
   transition: opacity 3s;
   opacity:1;
@@ -233,5 +235,25 @@ body
   font-size: 30px;
 }
 
+
+
+#NewsAndUpdateSelect
+{
+  transition: opacity 3s;
+  opacity:1;
+}
+
+#NewsAndUpdateSelect img
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: inline-block;
+}
+
+#NewsAndUpdateSelect img .hover
+{
+  
+}
 
 
