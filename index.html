@@ -38,7 +38,21 @@
 	
 	<p>and SURVIVE</p>
 </div>
+<hr>
+<div id="NewsAndUpdateSelect">
+	<h2>News and Updates</h2>
+	<ul>
+		<li><img src="Images/NewIcon2.jpg"><p>Text</p></img></li>
+		<li><img src="Images/NewIcon2.jpg"><p>Text</p></img></li>
+
+		<li><img src="Images/NewIcon2.jpg"><p>Text</p></img></li>
+
+	</ul>
 	
+
+	
+	
+</div>
 
 
 
@@ -85,6 +99,9 @@ function closeNavMenu() {
 window.addEventListener("scroll", (event) => {
     if (elementInViewport("Description")) {document.getElementById("Description").style.opacity=1}
     else{document.getElementById("Description").style.opacity=0.2}
+
+   if (elementInViewport("NewsAndUpdateSelect")) {document.getElementById("NewsAndUpdateSelect").style.opacity=1}
+    else{document.getElementById("NewsAndUpdateSelect").style.opacity=0.2}
 });
 
 function elementInViewport(Element) {

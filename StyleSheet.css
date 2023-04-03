@@ -241,19 +241,67 @@ body
 {
   transition: opacity 3s;
   opacity:1;
+  width: 100%;
+  text-align: center;
+  background-image: url("Images/Techbackground.png");
+  background-position: center;
+  background-repeat: repeat;
+  padding-bottom: 10%;
 }
+
+
+
 
 #NewsAndUpdateSelect img
 {
+  transition: 1s;
   display: flex;
-  justify-content: center;
   align-items: center;
   display: inline-block;
+  width: 60%;
+  padding: 0.7%;
+  filter: brightness(.6) drop-shadow(10px 10px 10px black);
+
+  
+
+
 }
 
-#NewsAndUpdateSelect img .hover
+#NewsAndUpdateSelect p
 {
-  
+  color: white;
+  text-align: center;
+  font-family: Space;
+  font-size: 20px;
+
 }
+
+#NewsAndUpdateSelect img:hover
+{
+  width: 75%;
+ 
+   filter: brightness(1.0);
+
+}
+
+
+
+#NewsAndUpdateSelect h2
+{
+  color: white;
+  text-align: center;
+  font-family: Space;
+  font-size: 50px;
+}
+
+
+#NewsAndUpdateSelect ul 
+{
+  display: flex;
+
+
+}
+
+
 
 
