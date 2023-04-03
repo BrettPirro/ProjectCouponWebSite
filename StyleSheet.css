@@ -254,17 +254,11 @@ body
 
 #NewsAndUpdateSelect img
 {
+
   transition: 1s;
-  display: flex;
-  align-items: center;
-  display: inline-block;
   width: 60%;
   padding: 0.7%;
   filter: brightness(.6) drop-shadow(10px 10px 10px black);
-
-  
-
-
 }
 
 #NewsAndUpdateSelect p
@@ -280,7 +274,7 @@ body
 {
   width: 75%;
  
-   filter: brightness(1.0);
+  filter: brightness(1.0);
 
 }
 
@@ -298,6 +292,7 @@ body
 #NewsAndUpdateSelect ul 
 {
   display: flex;
+
 
 
 }
