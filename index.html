@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Para-Fluence</title>
 	<div class="TaskBar" id="MainTaskBar">
-	 	<a span style="font-size:30px;cursor:pointer" onclick="openNavMenu()">&#9776;</span>
+	 	<a span id="MenuBTN" style="font-size:30px;cursor:pointer">&#9776;</span>
 	</div> 
 </head>
 <body>
@@ -23,10 +23,10 @@
 	</div>
 <hr>
 <div id="SocialTextBar">
-		<img href="#Twitter" class="icons" src="Images/Twitter.png">
-  	<img href="#Youtube"class="icons" src="Images/Youtube.png">
-  	<img href="#Itch" class="icons" src="Images/itch-io.png">
-  	<img href="#FaceBook" class="icons" src="Images/Facebook.png">
+		<a href="#Twitter"><img class="icons" src="Images/Twitter.png"></a>
+  	<a href="#Youtube"><img class="icons" src="Images/Youtube.png"></a>
+  	<a href="#Itch"><img class="icons" src="Images/itch-io.png"></a>
+  	<a href="#FaceBook"><img class="icons" src="Images/Facebook.png"></a>
 </div>
 <hr>
 
@@ -42,10 +42,10 @@
 <div id="NewsAndUpdateSelect">
 	<h2>News and Updates</h2>
 	<ul>
-		<li><img src="Images/NewIcon2.jpg"><p>Text</p></img></li>
-		<li><img src="Images/NewIcon2.jpg"><p>Text</p></img></li>
-
-		<li><img src="Images/NewIcon2.jpg"><p>Text</p></img></li>
+		<li><a href="#NewsPage"><img href="#NewsPage" src="Images/NewIcon2.jpg"></a><p>Text</p></img></li>
+		<li><a href="#NewsPage"><img href="#NewsPage" src="Images/NewIcon2.jpg"></a><p>Text</p></img></li>
+		<li><a href="#NewsPage"><img href="#NewsPage" src="Images/NewIcon2.jpg"></a><p>Text</p></img></li>
+		
 
 	</ul>
 	
@@ -63,10 +63,10 @@
 <div id="navMenu" class="nav">
   	<a href="javascript:void(0)" class="closebtn" onclick="closeNavMenu()">&times;</a>
   	<div id="SocialTextBar">
-		<img href="#Twitter" class="iconsInNav" src="Images/Twitter.png">
-  	<img href="#Youtube"class="iconsInNav" src="Images/Youtube.png">
-  	<img href="#Itch" class="iconsInNav" src="Images/itch-io.png">
-  	<img href="#FaceBook" class="iconsInNav" src="Images/Facebook.png">
+		<a href="#Twitter"><img class="iconsInNav" src="Images/Twitter.png"></a>
+  	<a href="#Youtube"><img class="iconsInNav" src="Images/Youtube.png"></a>
+  	<a href="#Itch"><img class="iconsInNav" src="Images/itch-io.png"></a>
+  	<a href="#FaceBook"><img class="iconsInNav" src="Images/Facebook.png"></a>
 		</div>	
 		<hr>
  
@@ -85,6 +85,7 @@
 
 <script>
 if (!elementInViewport("Description")) {document.getElementById("Description").style.opacity=0.2}
+document.getElementById("MenuBTN").addEventListener("click",openNavMenu)
 function openNavMenu() {
   document.getElementById("navMenu").style.width = "250px";
   document.getElementById("mainContent").style.marginLeft = "8%";
@@ -138,6 +139,6 @@ function elementInViewport(Element) {
 </script>
 </body>
 
-
+<footer></footer>
 
 </html>

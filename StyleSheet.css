@@ -169,7 +169,7 @@ body
   align-items: center;
   display: inline-block;
   color: #f2f2f2;
-  
+
   text-decoration: none;
   font-size: 17px;
 
@@ -185,14 +185,16 @@ body
 .icons
 {
    width: 50px;
-   padding: .5% 6.5%;
+   padding-left: 40px;
+   padding-right: 40px;
    
 }
 
 .iconsInNav
 {
-   width: 35px;
-   padding: .5% 4.8%;
+   width: 25px;
+   padding: 0% 1.8%;
+   float: left;
 }
 
 @font-face
