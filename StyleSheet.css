@@ -24,6 +24,7 @@
 	position: relative;
   top: 0;
   left: 0;
+
 }
 
 .Obj1
@@ -52,6 +53,7 @@ body
 {
 	background-color: #000000;
   margin: 0;
+  overflow-x: hidden;
 
 }
 
@@ -87,11 +89,10 @@ body
 }
 
 
-.TaskBar a.split
+.TaskBar .split
 {
 	float: right;
-	background-color: #3cb455;
-	color: white;
+
 }
 
 .TaskBar .item {
@@ -141,24 +142,14 @@ body
   transition: margin-left .5s;
 }
 
-@media screen and (max-height: 450px) {
-  .nav {padding-top: 15px;}
-  .nav a {font-size: 18px;}
-
-}
-
-@media screen and (max-width: 480px)
-{
-  #Title{ width: 90%; }
-
-}
-
 
 #SocialTextBar
 {
   display: flex;
   justify-content: center;
   align-items: center;
+
+
   
 }
 
@@ -173,6 +164,7 @@ body
   text-decoration: none;
   font-size: 17px;
 
+
 }
 
 #SocialTextBar img:hover
@@ -182,11 +174,15 @@ body
 
 }
 
+
+
 .icons
 {
+  transition: .5s;
    width: 50px;
-   padding-left: 40px;
-   padding-right: 40px;
+   padding-left: 90px;
+   padding-right: 90px;
+  
    
 }
 
@@ -222,6 +218,7 @@ body
 
 #Description h2
 {
+  transition: 0.5s;
   color: white;
   text-align: center;
   font-family: Space;
@@ -230,6 +227,7 @@ body
 
 #Description p
 {
+  transition: 0.5s;
   padding-top: 3%;
   color: white;
   font-family: Space;
@@ -246,9 +244,7 @@ body
   width: 100%;
   text-align: center;
   background-image: url("Images/Techbackground.png");
-  background-position: center;
-  background-repeat: repeat;
-  padding-bottom: 10%;
+
 }
 
 
@@ -259,7 +255,8 @@ body
 
   transition: 1s;
   width: 60%;
-  padding: 0.7%;
+  padding-right: 0.7%;
+  padding-left: 0.7%;
   filter: brightness(.6) drop-shadow(10px 10px 10px black);
 }
 
@@ -280,10 +277,14 @@ body
 
 }
 
-
+#NewsAndUpdateSelect hr
+{
+  padding: 0;
+}
 
 #NewsAndUpdateSelect h2
 {
+  transition: 0.5s;
   color: white;
   text-align: center;
   font-family: Space;
@@ -294,11 +295,145 @@ body
 #NewsAndUpdateSelect ul 
 {
   display: flex;
+  list-style: none;
+
 
 
 
 }
 
 
+#slideshow
+{
+  transition: 0.5s;
+}
+
+
+
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  
+  
+
+
+}
+
+.slideshow-container h2
+{
+  color: white;
+  text-align: center;
+  font-family: Space;
+  font-size: 50px;
+}
+
+.mySlides {
+  display: none;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 70px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+
+}
+
+.prev:hover, .next:hover {
+  background-color: #3cb455;
+  color: black;
+}
+
+
+.text {
+  color: white;
+  text-align: center;
+  font-family: Space;
+  font-size: 30px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+ 
+}
+
+
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #004d00;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+
+}
+
+.active, .dot:hover {
+  background-color: #3cb455;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {opacity: .2}
+  to {opacity: 1}
+}
+
+#copyright
+{
+  color: white;
+  text-align: center;
+  font-family: Space;
+  font-size: 20px;
+}
+
+
+h2
+{
+  color: white;
+  text-align: center;
+  font-family: Space;
+  font-size: 60px;
+}
+
+
+@media screen and (max-height: 450px) {
+  .nav {padding-top: 15px;}
+  .nav a {font-size: 18px;}
+
+}
+
+@media screen and (max-width: 800px)
+{ 
+
+  #NewsAndUpdateSelect img{width: 80%;}
+  #NewsAndUpdateSelect img:hover{width: 95%;}
+
+  #Title{ width: 90%; }
+  .icons{  padding-left: 30px; padding-right: 30px;}
+  #Description p{font-size: 20px;}
+  #Description h2{font-size: 35px;}
+  #NewsAndUpdateSelect h2{font-size: 35px;}
+}
 
 

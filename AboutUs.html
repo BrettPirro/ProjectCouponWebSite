@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="StyleSheet.css">
+<!-- use line to add favicon <link rel="icon" href="">-->
+<head>
+	
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>About Us</title>
+	<div class="TaskBar" id="MainTaskBar">
+	 	<a span class ="split" id="Search" style="font-size:30px;cursor:pointer;">&#x1F50E;&#xFE0E;</span>
+	 	<a span id="MenuBTN" style="font-size:30px;cursor:pointer">&#9776;</span>
+	</div> 
+</head>
+<body>
+
+
+
+<div id="mainContent">
+		<h2>The Team</h2>
+		<div id="NewsAndUpdateSelect" style="width: 100%; height: 100%;">
+			<hr>
+			
+			<ul style="padding-top: 5%;">
+				<li><a href="#NewsPage"><img href="#NewsPage" src="Images/NewIcon2.jpg"></a><p>Text</p></img></li>
+				<li><a href="#NewsPage"><img href="#NewsPage" src="Images/NewIcon2.jpg"></a><p>Text</p></img></li>
+				<li><a href="#NewsPage"><img href="#NewsPage" src="Images/NewIcon2.jpg"></a><p>Text</p></img></li>
+				
+
+			</ul>
+			<ul>
+				<li><a href="#NewsPage"><img href="#NewsPage" src="Images/NewIcon2.jpg"></a><p>Text</p></img></li>
+				<li><a href="#NewsPage"><img href="#NewsPage" src="Images/NewIcon2.jpg"></a><p>Text</p></img></li>
+				<li><a href="#NewsPage"><img href="#NewsPage" src="Images/NewIcon2.jpg"></a><p>Text</p></img></li>
+				
+
+			</ul>
+
+			
+				<hr>
+		</div>
+
+		
+
+</div>
+
+
+
+<div id="navMenu" class="nav">
+  	<a href="javascript:void(0)" class="closebtn" onclick="closeNavMenu()">&times;</a>
+  	<div id="SocialTextBar">
+		<a href="#Twitter"><img class="iconsInNav" src="Images/Twitter.png"></a>
+  	<a href="#Youtube"><img class="iconsInNav" src="Images/Youtube.png"></a>
+  	<a href="#Itch"><img class="iconsInNav" src="Images/itch-io.png"></a>
+  	<a href="#FaceBook"><img class="iconsInNav" src="Images/Facebook.png"></a>
+		</div>	
+		<hr>
+ 
+  	<a href="index.html">Home</a>
+  	<a href="AboutUs.html">About Us</a>
+  	<a href="#Updates">Updates</a>
+  	<a href="#Support">Support</a>
+</div>
+
+
+
+
+</body>
+
+<footer>
+	
+	<div id="copyright" align="center">&copy; 2023 - 2023 www.para-fluence.com</div>
+</footer>
+<script>
+	var TimesClicked=0
+	document.getElementById("Search").addEventListener("click",TryingToSearch)
+	document.getElementById("MenuBTN").addEventListener("click",openNavMenu)
+	updateCopyright();
+
+	function openNavMenu() {
+	  document.getElementById("navMenu").style.width = "250px";
+	  document.getElementById("mainContent").style.marginLeft = "8%";
+	}
+
+	function closeNavMenu() {
+	  document.getElementById("navMenu").style.width = "0";
+	  document.getElementById("mainContent").style.marginLeft= "0%";
+	}
+
+
+	window.addEventListener("scroll", (event) => {
+	   
+
+	   if (elementInViewport("NewsAndUpdateSelect")) {document.getElementById("NewsAndUpdateSelect").style.opacity=1}
+	    else{document.getElementById("NewsAndUpdateSelect").style.opacity=0.2}
+		
+		
+
+	});
+
+	function elementInViewport(Element) {
+			var myElement = document.getElementById(Element);
+			var myElementHeight = myElement.offsetHeight;
+			var myElementWidth = myElement.offsetWidth;
+	    var bounding = myElement.getBoundingClientRect();
+
+	    if (bounding.top >= -myElementHeight 
+	        && bounding.left >= -myElementWidth
+	        && bounding.right <= (window.innerWidth || document.documentElement.clientWidth) + myElementWidth
+	        && bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) + myElementHeight) {
+
+	        return true;
+	    } else {
+
+	        return false;
+	    }
+	}
+
+	function TryingToSearch()
+	{
+		TimesClicked++;
+		switch(TimesClicked)
+		{
+			case 1:
+				alert("There is no search because there is no escape");
+				break;
+			case 2:
+				alert("What do you want?");
+				break;
+			case 3:
+				alert("You better stop or else :(");
+				break;
+			case 4:
+				alert("Thats it!!!!! I dare you to click it one more time");
+				break;
+			case 5:
+				alert("Now you lost the search button :)");
+				document.getElementById("Search").style.opacity=0;
+				break;
+
+
+		}
+
+	}
+
+	
+
+	function updateCopyright()
+	{
+		let cpr = document.getElementById("copyright");
+		cpr.innerHTML = "&copy; 2023 - "+new Date().getFullYear()+" www.para-fluence.com - All Rights Reserved.";
+		cpr.innerHTML += "<br/>Last Updated : "+document.lastModified;
+	}
+
+
+</script>
+</html>

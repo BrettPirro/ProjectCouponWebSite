@@ -9,7 +9,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Para-Fluence</title>
 	<div class="TaskBar" id="MainTaskBar">
+	 	<a span class ="split" id="Search" style="font-size:30px;cursor:pointer;">&#x1F50E;&#xFE0E;</span>
 	 	<a span id="MenuBTN" style="font-size:30px;cursor:pointer">&#9776;</span>
+	 
+	 
 	</div> 
 </head>
 <body>
@@ -17,44 +20,81 @@
 
 
 <div id="mainContent">
-	<div class="SortObj">
-		<img class='Obj2'id="Title" src="Images/Title.png">
-	  <img class='Obj1' id="CoverImg" src="Images/CoverImg.png">
+		<div class="SortObj">
+				<img class='Obj2'id="Title" src="Images/Title.png">
+			  <img class='Obj1' id="CoverImg" src="Images/CoverImg.png">
+		</div>
+		<hr>
+		<div id="SocialTextBar">
+				<a href="#Twitter"><img class="icons" src="Images/Twitter.png"></a>
+		  	<a href="#Youtube"><img class="icons" src="Images/Youtube.png"></a>
+		  	<a href="#Itch"><img class="icons" src="Images/itch-io.png"></a>
+		  	<a href="#FaceBook"><img class="icons" src="Images/Facebook.png"></a>
+		</div>
+		<hr>
+
+		<div id="Description">
+			<h2>Dive into the depths...</h2>
+			<p>Explore the depths of your ship</p>
+			
+			<p>See whats hidden underneath</p>
+			
+			<p>and SURVIVE</p>
+		</div>
+		<div class="slideshow-container" id="slideshow">
+			 	<h2>ScreenShots</h2>
+
+			 	<div class="mySlides fade">
+			    
+			  		<img src="Images/ScreenShots/Screen1.png" style="width:100%">
+			    	<div class="text">GamePlay 1</div>
+			 	</div>
+
+			 	<div class="mySlides fade">
+			    
+			    	<img src="Images/ScreenShots/Screen2.png" style="width:100%">
+			    	<div class="text">GamePlay 2</div>
+			  	</div>
+
+			  	<div class="mySlides fade">
+			    
+			    	<img src="Images/ScreenShots/Screen3.png" style="width:100%">
+			    	<div class="text">GamePlay 3</div>
+			  	</div>
+
+
+			  	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			  	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+			<br>
+
+
+			<div style="text-align:center">
+			  <span class="dot" onclick="currentSlide(1)"></span>
+			  <span class="dot" onclick="currentSlide(2)"></span>
+			  <span class="dot" onclick="currentSlide(3)"></span>
+			</div>
+			<br>
 	</div>
-<hr>
-<div id="SocialTextBar">
-		<a href="#Twitter"><img class="icons" src="Images/Twitter.png"></a>
-  	<a href="#Youtube"><img class="icons" src="Images/Youtube.png"></a>
-  	<a href="#Itch"><img class="icons" src="Images/itch-io.png"></a>
-  	<a href="#FaceBook"><img class="icons" src="Images/Facebook.png"></a>
-</div>
-<hr>
 
-<div id="Description">
-	<h2>Dive into the depths...</h2>
-	<p>Explore the depths of your ship</p>
-	
-	<p>See whats hidden underneath</p>
-	
-	<p>and SURVIVE</p>
-</div>
-<hr>
-<div id="NewsAndUpdateSelect">
-	<h2>News and Updates</h2>
-	<ul>
-		<li><a href="#NewsPage"><img href="#NewsPage" src="Images/NewIcon2.jpg"></a><p>Text</p></img></li>
-		<li><a href="#NewsPage"><img href="#NewsPage" src="Images/NewIcon2.jpg"></a><p>Text</p></img></li>
-		<li><a href="#NewsPage"><img href="#NewsPage" src="Images/NewIcon2.jpg"></a><p>Text</p></img></li>
+
+		<div id="NewsAndUpdateSelect">
+			<hr>
+			<h2>News and Updates</h2>
+			<ul>
+				<li><a href="#NewsPage"><img href="#NewsPage" src="Images/NewIcon2.jpg"></a><p>Text</p></img></li>
+				<li><a href="#NewsPage"><img href="#NewsPage" src="Images/NewIcon2.jpg"></a><p>Text</p></img></li>
+				<li><a href="#NewsPage"><img href="#NewsPage" src="Images/NewIcon2.jpg"></a><p>Text</p></img></li>
+				
+
+			</ul>
+			
+
+			
+			<hr>
+		</div>
+
 		
-
-	</ul>
-	
-
-	
-	
-</div>
-
-
 
 </div>
 
@@ -70,8 +110,8 @@
 		</div>	
 		<hr>
  
-  	<a href="#Home">Home</a>
-  	<a href="#About_Us">About Us</a>
+  	<a href="index.html">Home</a>
+  	<a href="AboutUs.html">About Us</a>
   	<a href="#Updates">Updates</a>
   	<a href="#Support">Support</a>
 </div>
@@ -79,66 +119,124 @@
 
 
 
+</body>
 
+<footer>
 
-
-
+	<div id="copyright" align="center">&copy; 2023 - 2023 www.para-fluence.com</div>
+</footer>
 <script>
-if (!elementInViewport("Description")) {document.getElementById("Description").style.opacity=0.2}
-document.getElementById("MenuBTN").addEventListener("click",openNavMenu)
-function openNavMenu() {
-  document.getElementById("navMenu").style.width = "250px";
-  document.getElementById("mainContent").style.marginLeft = "8%";
-}
+	let slideIndex = 1;
+	var TimesClicked=0
+	showSlides(slideIndex);
+	document.getElementById("MenuBTN").addEventListener("click",openNavMenu)
+	document.getElementById("Search").addEventListener("click",TryingToSearch)
+	updateCopyright();
 
-function closeNavMenu() {
-  document.getElementById("navMenu").style.width = "0";
-  document.getElementById("mainContent").style.marginLeft= "0%";
-}
+	function openNavMenu() {
+	  document.getElementById("navMenu").style.width = "250px";
+	  document.getElementById("mainContent").style.marginLeft = "8%";
+	}
 
-
-window.addEventListener("scroll", (event) => {
-    if (elementInViewport("Description")) {document.getElementById("Description").style.opacity=1}
-    else{document.getElementById("Description").style.opacity=0.2}
-
-   if (elementInViewport("NewsAndUpdateSelect")) {document.getElementById("NewsAndUpdateSelect").style.opacity=1}
-    else{document.getElementById("NewsAndUpdateSelect").style.opacity=0.2}
-});
-
-function elementInViewport(Element) {
-		var myElement = document.getElementById(Element);
-		var myElementHeight = myElement.offsetHeight;
-		var myElementWidth = myElement.offsetWidth;
-    var bounding = myElement.getBoundingClientRect();
-
-    if (bounding.top >= -myElementHeight 
-        && bounding.left >= -myElementWidth
-        && bounding.right <= (window.innerWidth || document.documentElement.clientWidth) + myElementWidth
-        && bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) + myElementHeight) {
-
-        return true;
-    } else {
-
-        return false;
-    }
-}
+	function closeNavMenu() {
+	  document.getElementById("navMenu").style.width = "0";
+	  document.getElementById("mainContent").style.marginLeft= "0%";
+	}
 
 
+	function TryingToSearch()
+	{
+		TimesClicked++;
+		switch(TimesClicked)
+		{
+			case 1:
+				alert("There is no search because there is no escape");
+				break;
+			case 2:
+				alert("What do you want?");
+				break;
+			case 3:
+				alert("You better stop or else :(");
+				break;
+			case 4:
+				alert("Thats it!!!!! I dare you to click it one more time");
+				break;
+			case 5:
+				alert("Now you lost the search button :)");
+				document.getElementById("Search").style.opacity=0;
+				break;
+
+
+		}
+
+	}
+
+
+	window.addEventListener("scroll", (event) => {
+	    if (elementInViewport("Description")) {document.getElementById("Description").style.opacity=1}
+	    else{document.getElementById("Description").style.opacity=0.2}
+
+	   if (elementInViewport("NewsAndUpdateSelect")) {document.getElementById("NewsAndUpdateSelect").style.opacity=1}
+	    else{document.getElementById("NewsAndUpdateSelect").style.opacity=0.2}
+		
+		if (elementInViewport("slideshow")) {document.getElementById("slideshow").style.opacity=1}
+		    else{document.getElementById("slideshow").style.opacity=0.2}
+
+	});
+
+	function elementInViewport(Element) {
+			var myElement = document.getElementById(Element);
+			var myElementHeight = myElement.offsetHeight;
+			var myElementWidth = myElement.offsetWidth;
+	    var bounding = myElement.getBoundingClientRect();
+
+	    if (bounding.top >= -myElementHeight 
+	        && bounding.left >= -myElementWidth
+	        && bounding.right <= (window.innerWidth || document.documentElement.clientWidth) + myElementWidth
+	        && bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) + myElementHeight) {
+
+	        return true;
+	    } else {
+
+	        return false;
+	    }
+	}
 
 
 
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
 
 
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+	  let i;
+	  let slides = document.getElementsByClassName("mySlides");
+	  let dots = document.getElementsByClassName("dot");
+	  if (n > slides.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+	    slides[i].style.display = "none";
+	  }
+	  for (i = 0; i < dots.length; i++) {
+	    dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";
+	  dots[slideIndex-1].className += " active";
+	} 
 
 
-
-
-
+	function updateCopyright()
+	{
+		let cpr = document.getElementById("copyright");
+		cpr.innerHTML = "&copy; 2023 - "+new Date().getFullYear()+" www.para-fluence.com - All Rights Reserved.";
+		cpr.innerHTML += "<br/>Last Updated : "+document.lastModified;
+	}
 
 
 </script>
-</body>
-
-<footer></footer>
-
 </html>
