@@ -423,7 +423,7 @@ h2
 
 }
 
-@media screen and (max-width: 800px)
+@media screen and (max-width: 900px)
 { 
 
   #NewsAndUpdateSelect img{width: 80%;}
@@ -434,6 +434,7 @@ h2
   #Description p{font-size: 20px;}
   #Description h2{font-size: 35px;}
   #NewsAndUpdateSelect h2{font-size: 35px;}
+  .slideshow-container h2{font-size: 35px;}
 }
 
 
