@@ -321,6 +321,7 @@ body
 
 .slideshow-container h2
 {
+  transition: 0.5s;
   color: white;
   text-align: center;
   font-family: Space;
