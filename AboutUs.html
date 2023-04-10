@@ -9,8 +9,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>About Us</title>
 	<div class="TaskBar" id="MainTaskBar">
-	 	<a span class ="split" id="Search" style="font-size:30px;cursor:pointer;">&#x1F50E;&#xFE0E;</span>
+			<div id="SearchParent"></div>
+	 	<a span class ="split" id="Search" style="font-size:30px;cursor:pointer;">&#x1F50E;&#xFE0E; </span>
+
 	 	<a span id="MenuBTN" style="font-size:30px;cursor:pointer">&#9776;</span>
+
+	 
+	 
 	</div> 
 </head>
 <body>
@@ -73,7 +78,17 @@
 	<div id="copyright" align="center">&copy; 2023 - 2023 www.para-fluence.com</div>
 </footer>
 <script>
-	var TimesClicked=0
+	var IsSearchActive=false;
+	var SearchBar=null;
+	//Use dict below to add names to search on enter it will search through dict if similar it will reccomend 
+	//if not similar it will say it cant find that page
+	//make a page for search results called searchPage.html
+	const NamesToLinks={};
+
+
+
+
+
 	document.getElementById("Search").addEventListener("click",TryingToSearch)
 	document.getElementById("MenuBTN").addEventListener("click",openNavMenu)
 	updateCopyright();
@@ -119,27 +134,23 @@
 
 	function TryingToSearch()
 	{
-		TimesClicked++;
-		switch(TimesClicked)
+		if (!IsSearchActive) 
 		{
-			case 1:
-				alert("There is no search because there is no escape");
-				break;
-			case 2:
-				alert("What do you want?");
-				break;
-			case 3:
-				alert("You better stop or else :(");
-				break;
-			case 4:
-				alert("Thats it!!!!! I dare you to click it one more time");
-				break;
-			case 5:
-				alert("Now you lost the search button :)");
-				document.getElementById("Search").style.opacity=0;
-				break;
+				IsSearchActive=true;
+				SearchBar= document.createElement('input');
+				SearchBar.setAttribute('type', 'search');
+				SearchBar.className="split"
+				SearchBar.setAttribute('id','SearchInput')
+
+				var parent = document.getElementById("SearchParent");
+				parent.appendChild(SearchBar);
 
 
+		}
+		else
+		{
+			IsSearchActive=false;
+			SearchBar.remove();
 		}
 
 	}
