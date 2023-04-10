@@ -12,7 +12,7 @@
 	<div class="TaskBar" id="MainTaskBar">
 			<div id="SearchParent"></div>
 	 	<a span class ="split" id="Search" style="font-size:30px;cursor:pointer;">&#x1F50E;&#xFE0E; </span>
-	 
+
 	 	<a span id="MenuBTN" style="font-size:30px;cursor:pointer">&#9776;</span>
 
 	 
@@ -134,6 +134,13 @@
 	let slideIndex = 1;
 	var IsSearchActive=false;
 	var SearchBar=null;
+	//Use dict below to add names to search on enter it will search through dict if similar it will reccomend 
+	//if not similar it will say it cant find that page
+	//make a page for search results called searchPage.html
+	const NamesToLinks={};
+
+
+
 
 	showSlides(slideIndex);
 	document.getElementById("MenuBTN").addEventListener("click",openNavMenu)
