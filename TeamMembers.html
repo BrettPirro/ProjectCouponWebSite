@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="StyleSheet.css">
+<!-- use line to add favicon <link rel="icon" href="">-->
+<head>
+	
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Updates</title>
+	<div class="TaskBar" id="MainTaskBar">
+			<div id="SearchParent"></div>
+	 	
+
+	 	<a span id="MenuBTN" style="font-size:30px;cursor:pointer">&#9776;</span>
+
+	 
+	 
+	</div> 
+</head>
+<body>
+
+
+
+<div id="mainContent">
+		
+		<h2 id="TeamTitle">Team Member</h2>
+		
+		<div class ="UpdateBackgroud">
+			<hr>
+			
+			<div id="lineTextNexttoImg">
+				<p id="MemberDescription">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum. Ut diam quam nulla porttitor massa id neque aliquam vestibulum. Diam sit amet nisl suscipit adipiscing. Ac turpis egestas integer eget aliquet nibh praesent tristique magna. Tristique magna sit amet purus gravida. Turpis massa sed elementum tempus egestas sed sed. Nec ullamcorper sit amet risus nullam eget. Semper risus in hendrerit gravida rutrum quisque non tellus. Adipiscing at in tellus integer feugiat scelerisque varius morbi. Quam adipiscing vitae proin sagittis nisl rhoncus. Accumsan in nisl nisi scelerisque eu ultrices.
+				</p>
+				<img id="Pfp" src="Images/NewIcon2.png">
+			
+			</div>
+			<hr>
+		</div>
+		
+
+</div>
+
+
+
+<div id="navMenu" class="nav">
+  	<a href="javascript:void(0)" class="closebtn" onclick="closeNavMenu()">&times;</a>
+  	<div id="SocialTextBar">
+	<a href="https://twitter.com/VillaMariaClg"><img class="iconsInNav" src="Images/Twitter.png"></a>
+  	<a href="https://www.youtube.com/channel/UCyfxtnmjI-Rmwf4kIGI52Rw"><img class="iconsInNav" src="Images/Youtube.png"></a>
+  	<a href="#Itch"><img class="iconsInNav" src="Images/itch-io.png"></a>
+  	<a href="https://www.facebook.com/VillaMariaCollege/"><img class="iconsInNav" src="Images/Facebook.png"></a>
+		</div>	
+		<hr>
+ 
+  	<a href="index.html">Home</a>
+  	<a href="AboutUs.html">About Us</a>
+  	<a href="Updates.html">Updates</a>
+  	<a href="Support.html">Support</a>
+</div>
+
+
+
+
+</body>
+
+<footer>
+	
+	<div id="copyright" align="center">&copy; 2023 - 2023 www.para-fluence.com</div>
+</footer>
+<script>
+	var IsSearchActive=false;
+	var SearchBar=null;
+	//Use dict below to add names to search on enter it will search through dict if similar it will reccomend 
+	//if not similar it will say it cant find that page
+	//make a page for search results called searchPage.html
+	const NamesToLinks={};
+
+	var hash=location.hash.substr(1);
+	console.log(hash);
+	var Description=document.getElementById("MemberDescription");
+	var Pfp=document.getElementById("Pfp");
+
+	var Title=document.getElementById("TeamTitle");
+
+	Title.innerHTML=hash;
+
+	switch(hash) 
+	{
+ 	 case "Sam-Speciale":
+ 	 	Pfp.src="Images/AboutUsPic/SamPfp.jpg";
+ 	 	Description.innerHTML = "Sam Speciale is currently studying at Villa Maria to earn his Bachelor of Fine Arts Degree in Game Design. He has earned a Bachelor of Arts in Music Degree and has the experience of creating games from concept to completion while taking on various roles in the process, including such roles as Game and Interactive Designer, Producer, Programmer, Composer and Sound Engineer, and Graphic Designer to name a few. After finishing his degree, he will continue his pursuit of game design and creation.<br><br> Contacts: <a href='https://www.linkedin.com/in/specialeized'>Linkdin</a>";
+
+   		break;
+	 case "Vega":
+		Pfp.src="Images/AboutUsPic/VegaPfp.png";
+		Description.innerHTML = "Vega took the role of the Lead Artist. With a specialization in 3D modeling and design and experience in various forms of 2D and 3D asset creatio, Vega is multifaceted talent with work that speaks for itself.";
+	    break;
+
+	 case "Joe-Meany":
+	   Pfp.src="Images/AboutUsPic/JoePfp.jpg";
+	   Description.innerHTML = "Joe Meany took the role of lead programmer in this project displaying his high skills in coding, debugging, etc. He was a major part of forming this project into the finished product it is now, He is currently finishing his degree, with the pursuit of programming in other projects. ";
+	    break;
+	 case "Natasha-Alston":
+	   Pfp.src="Images/AboutUsPic/NatashaPfp.png";
+	     Description.innerHTML = "JFrom Shakespeare to sci-fi horror, Natasha enjoys exploring and bringing a variety of narratives to life for all audiences. She has worked in her hometown of Sacramento's music and film festival to bring local artists' music videos to the screen as a director and producer, as well as stage manage live theater productions for Shakespeare in the Park. She even traveled to Vancouver BC to pursue writing where she worked on several independent film productions and helped produce the festival touring short, Small Displays of Chaos. She has since taken on the task of pursuing more ways to bring stories to life by moving to Buffalo NY in order to study animation and game design.<br><br> Contacts: <a href='https://www.linkedin.com/in/natasha-alston-84289abb/'>Linkdin</a> ";
+	    break;
+	 case "Javonntae-Hill":
+	  Pfp.src="Images/AboutUsPic/JavonntaePfp.jpg";
+	  Description.innerHTML = "Javonntae 'Von Wick' Hill is a Senior at Villa Maria College Majoring in Game Design. He has taken courses involving, Game development, post and pre-production; HTML & CSS coding; character animation; 3D environment asset modeling; visual scripting in the Unreal engine; Bolt visual scripting in the Unity engine and much more. Specializing in user interface and environmental art design. <br><br> Contacts: <a href='https://www.linkedin.com/in/javonntae-hill-4469221b7/'>Linkdin</a>";
+	    break;
+	 case "Timothy-Clavier":
+	    Pfp.src="Images/AboutUsPic/TimPfp.png";
+	    Description.innerHTML = "Timothy is an independent artist from Buffalo, NY. With over 10 years of experience with programs such as Flash/Animate, Toon Boom, and Photoshop, he specializes in animation, story, and character design. He is scheduled to graduate with BFA in Animation in May 2023. <br><br> Contacts: <a href='https://ticla2010.wixsite.com/ticlastudios'>Portfolio</a>";
+	    break;
+	  case "Brett-Pirro":
+	  	Pfp.src="Images/AboutUsPic/BrettPfp.jpg";
+	  	Description.innerHTML = "Brett is currently studying at Villa maria to earn his Bachelor in Computer Software Development. Carrying high experience in web design, unity, object oriented coded, and general C# applications. With many projects within these fields to boot. After finishing his degree, he will continue his pursuit in software development industry.  <br><br> Contacts: <a href='https://www.linkedin.com/in/brett-pirro-907328183/'>Linkdin</a> <a href='https://github.com/BrettPirro'>GitHub</a>";
+	  	break;
+
+	    case "Aurora-Mills":
+	  	Pfp.src="Images/AboutUsPic/AuroraMillsPfp.jpg";
+	  	Description.innerHTML = "Insert Description";
+	  	break;
+
+	
+    
+	} 
+
+
+
+
+
+	document.getElementById("MenuBTN").addEventListener("click",openNavMenu)
+	updateCopyright();
+
+	function openNavMenu() {
+	  document.getElementById("navMenu").style.width = "250px";
+	  document.getElementById("mainContent").style.marginLeft = "8%";
+	}
+
+	function closeNavMenu() {
+	  document.getElementById("navMenu").style.width = "0";
+	  document.getElementById("mainContent").style.marginLeft= "0%";
+	}
+
+
+	
+
+	function elementInViewport(Element) {
+			var myElement = document.getElementById(Element);
+			var myElementHeight = myElement.offsetHeight;
+			var myElementWidth = myElement.offsetWidth;
+	    var bounding = myElement.getBoundingClientRect();
+
+	    if (bounding.top >= -myElementHeight 
+	        && bounding.left >= -myElementWidth
+	        && bounding.right <= (window.innerWidth || document.documentElement.clientWidth) + myElementWidth
+	        && bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) + myElementHeight) {
+
+	        return true;
+	    } else {
+
+	        return false;
+	    }
+	}
+
+	function TryingToSearch()
+	{
+		if (!IsSearchActive) 
+		{
+				IsSearchActive=true;
+				SearchBar= document.createElement('input');
+				SearchBar.setAttribute('type', 'search');
+				SearchBar.className="split"
+				SearchBar.setAttribute('id','SearchInput')
+
+				var parent = document.getElementById("SearchParent");
+				parent.appendChild(SearchBar);
+
+
+		}
+		else
+		{
+			IsSearchActive=false;
+			SearchBar.remove();
+		}
+
+	}
+
+	
+
+	function updateCopyright()
+	{
+		let cpr = document.getElementById("copyright");
+		cpr.innerHTML = "&copy; 2023 - "+new Date().getFullYear()+" www.para-fluence.com - All Rights Reserved.";
+		cpr.innerHTML += "<br/>Last Updated : "+document.lastModified;
+	}
+
+
+	
+
+
+
+</script>
+</html>

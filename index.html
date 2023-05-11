@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" type="text/css" href="StyleSheet.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- use line to add favicon <link rel="icon" href="">-->
 <head>
 	
@@ -11,7 +12,7 @@
 	
 	<div class="TaskBar" id="MainTaskBar">
 			<div id="SearchParent"></div>
-	 	<a span class ="split" id="Search" style="font-size:30px;cursor:pointer;">&#x1F50E;&#xFE0E; </span>
+	 	
 
 	 	<a span id="MenuBTN" style="font-size:30px;cursor:pointer">&#9776;</span>
 
@@ -30,10 +31,10 @@
 		</div>
 		<hr>
 		<div id="SocialTextBar">
-				<a href="#Twitter"><img class="icons" src="Images/Twitter.png"></a>
-		  	<a href="#Youtube"><img class="icons" src="Images/Youtube.png"></a>
+			<a href="https://twitter.com/VillaMariaClg"><img class="icons" src="Images/Twitter.png"></a>
+		  	<a href="https://www.youtube.com/channel/UCyfxtnmjI-Rmwf4kIGI52Rw"><img class="icons" src="Images/Youtube.png"></a>
 		  	<a href="#Itch"><img class="icons" src="Images/itch-io.png"></a>
-		  	<a href="#FaceBook"><img class="icons" src="Images/Facebook.png"></a>
+		  	<a href="https://www.facebook.com/VillaMariaCollege/"><img class="icons" src="Images/Facebook.png"></a>
 		</div>
 		<hr>
 
@@ -45,13 +46,25 @@
 			
 			<p>and SURVIVE</p>
 		</div>
+		<br>
+
+		<div id="NewsAndUpdateSelect">
+			<hr>
+				<h2>Download the Game Right Here</h2>
+				<a href="Game/Para-Fluence.zip"><button class="btn" style="width:100%;"><i class="fa fa-download"></i> Download</button></a>
+
+			
+			<hr>
+		</div>
+
+
 		<div class="slideshow-container" id="slideshow">
 			 	<h2>ScreenShots</h2>
 
 			 	<div class="mySlides fade">
 			    
 			  		<img src="Images/ScreenShots/Screen1.png" style="width:100%">
-			    	<div class="text">Exploring lower organs</div>
+			    	<div class="text">GamePlay-1</div>
 			 	</div>
 
 			 	<div class="mySlides fade">
@@ -63,7 +76,13 @@
 			  	<div class="mySlides fade">
 			    
 			    	<img src="Images/ScreenShots/Screen3.png" style="width:100%">
-			    	<div class="text">Exploring Lungs</div>
+			    	<div class="text">GamePlay-2</div>
+			  	</div>
+
+			  	  	<div class="mySlides fade">
+			    
+			    	<img src="Images/ScreenShots/Screen4.png" style="width:100%">
+			    	<div class="text">GamePlay-3</div>
 			  	</div>
 
 
@@ -86,9 +105,9 @@
 			<hr>
 			<h2>News and Updates</h2>
 			<ul>
-				<li><a href="#NewsPage"><img href="#NewsPage" src="Images/NewIcon2.jpg"></a><p>Text</p></img></li>
-				<li><a href="#NewsPage"><img href="#NewsPage" src="Images/NewIcon2.jpg"></a><p>Text</p></img></li>
-				<li><a href="#NewsPage"><img href="#NewsPage" src="Images/NewIcon2.jpg"></a><p>Text</p></img></li>
+				<li><a href="#NewsPage"><img href="#NewsPage" src="Images/Download.jpg"></a><p>Para-Fluence Available for Download</p></img></li>
+				<li><a href="#NewsPage"><img href="#NewsPage" src="Images/ShowCaseicon.png"></a><p>Design showcase on May 11th</p></img></li>
+				<li><a href="#NewsPage"><img href="#NewsPage" src="Images/Webicon.png"></a><p>Website Completion</p></img></li>
 				
 
 			</ul>
@@ -100,6 +119,9 @@
 
 		
 
+
+
+
 </div>
 
 
@@ -107,17 +129,17 @@
 <div id="navMenu" class="nav">
   	<a href="javascript:void(0)" class="closebtn" onclick="closeNavMenu()">&times;</a>
   	<div id="SocialTextBar">
-		<a href="#Twitter"><img class="iconsInNav" src="Images/Twitter.png"></a>
-  	<a href="#Youtube"><img class="iconsInNav" src="Images/Youtube.png"></a>
+	<a href="https://twitter.com/VillaMariaClg"><img class="iconsInNav" src="Images/Twitter.png"></a>
+  	<a href="https://www.youtube.com/channel/UCyfxtnmjI-Rmwf4kIGI52Rw"><img class="iconsInNav" src="Images/Youtube.png"></a>
   	<a href="#Itch"><img class="iconsInNav" src="Images/itch-io.png"></a>
-  	<a href="#FaceBook"><img class="iconsInNav" src="Images/Facebook.png"></a>
+  	<a href="https://www.facebook.com/VillaMariaCollege/"><img class="iconsInNav" src="Images/Facebook.png"></a>
 		</div>	
 		<hr>
  
   	<a href="index.html">Home</a>
   	<a href="AboutUs.html">About Us</a>
-  	<a href="#Updates">Updates</a>
-  	<a href="#Support">Support</a>
+  	<a href="Updates.html">Updates</a>
+  	<a href="Support.html">Support</a>
 </div>
 
 
@@ -144,7 +166,7 @@
 
 	showSlides(slideIndex);
 	document.getElementById("MenuBTN").addEventListener("click",openNavMenu)
-	document.getElementById("Search").addEventListener("click",TryingToSearch)
+	
 	updateCopyright();
 
 	function openNavMenu() {

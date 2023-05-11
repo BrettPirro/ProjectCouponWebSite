@@ -417,6 +417,22 @@ h2
   font-size: 60px;
 }
 
+h3
+{
+  color: white;
+  text-align: center;
+  font-family: Space;
+  font-size: 40px;
+
+}
+
+h4
+{
+   color: white;
+  text-align: center;
+  font-family: Space;
+  font-size: 40px;
+}
 
 @media screen and (max-height: 450px) {
   .nav {padding-top: 15px;}
@@ -424,19 +440,6 @@ h2
 
 }
 
-@media screen and (max-width: 900px)
-{ 
-
-  #NewsAndUpdateSelect img{width: 80%;}
-  #NewsAndUpdateSelect img:hover{width: 95%;}
-
-  #Title{ width: 90%; }
-  .icons{  padding-left: 30px; padding-right: 30px;}
-  #Description p{font-size: 20px;}
-  #Description h2{font-size: 35px;}
-  #NewsAndUpdateSelect h2{font-size: 35px;}
-  .slideshow-container h2{font-size: 35px;}
-}
 
 #SearchInput
 {
@@ -453,4 +456,125 @@ h2
 {
   display: inline;
   position: relative;
+}
+
+.NewsPageOrderingFinal
+
+{
+  display:inline-block; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 33%;
+}
+
+.UpdateBackgroud
+{
+  width: 100%;
+  text-align: center;
+  background-image: url("Images/Techbackground.png");
+
+
+
+}
+
+#lineTextNexttoImg img
+{
+
+ width:700px;
+ 
+ margin-right: 5%;
+ padding-left: 5%;
+
+
+}
+
+
+.UpdateBackgroud h3
+{
+  padding-top: 5%;
+
+
+}
+
+
+.UpdateBackgroud h4
+{
+  padding-top: 2%;
+  padding-bottom: 2%;
+     border-style: solid;
+  border-radius: 10px;
+  border-color: white;
+  border-width: 10px;
+  background-color: black;
+  margin-left: 10%;
+  margin-right: 10%;
+
+
+
+}
+
+
+.UpdateBackgroud p
+{
+  text-align: left;
+  margin-left: 10%;
+  color: white;
+  font-family: Space;
+  padding:5% ;
+    border-style: solid;
+  border-radius: 10px;
+  border-color: white;
+  border-width: 10px;
+  background-color: black;
+
+}
+
+
+
+
+
+#lineTextNexttoImg
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+
+
+
+@media screen and (max-width: 920px)
+{ 
+
+  #NewsAndUpdateSelect img{width: 80%;}
+  #NewsAndUpdateSelect img:hover{width: 95%;}
+
+  #Title{ width: 90%; }
+  .icons{  padding-left: 30px; padding-right: 30px;}
+  #Description p{font-size: 20px;}
+  #Description h2{font-size: 35px;}
+  #NewsAndUpdateSelect h2{font-size: 35px;}
+  .slideshow-container h2{font-size: 35px;}
+  #lineTextNexttoImg  {display: block; }
+  #lineTextNexttoImg p{font-size: 20px; margin-right: 10%;}
+   #lineTextNexttoImg img{width: 500px;}
+
+}
+
+
+
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
 }
